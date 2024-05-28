@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'mixins';
+
+.arp {
+    display: flex;
+    margin: auto;
+}
+
+.hid {
+    display: normal;
+    @media (max-width: $desktop) {
+        display: none;
+    }
+    @media (max-width: $tablet) {
+        display: flex;
+    }
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 100px;
+    @media (max-width: $desktop) {
+        max-width: 846px;
+    }
+    @media (max-width: $tablet) {
+        max-width: 554px;
+    }
+}
+
+.catalog {
+    display: grid;
+    gap: 70px;
+    &Top {
+        display: flex;
+        justify-content: space-between;
+
+        &Title {
+            @include h2-title;
+            text-align: left;
+        }
+
+        &Arrows {
+            display: flex;
+            gap: 10px;
+            &Button {
+                background-color: $blue;
+                border-radius: 3px;
+                padding: 9px;
+                border: none;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(0.9, 0.9);
+                }
+                &Image {
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    &Bottom {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: $desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

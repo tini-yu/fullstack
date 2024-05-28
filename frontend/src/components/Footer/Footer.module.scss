@@ -1,0 +1,211 @@
+@import 'variables';
+@import 'mixins';
+
+
+
+.footer {
+    position: relative;
+    max-width: 100%;
+    background: $black;
+    margin-top: 100px;
+    padding: 50px 0 50px 0;
+}
+
+.over {
+    display: grid;
+    gap: 50px;
+    max-width: 1140px;
+    margin: auto;
+    @media (max-width: $desktop) {
+        padding: 0 20px;
+
+    }
+}
+
+.small {
+    @include small-text;
+    text-align: left;
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
+}
+
+.wrapper {
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 80px;
+    margin: auto;
+    @media (max-width: $desktop) {
+        gap: 20px;
+    }
+    @media (max-width: $tablet) {
+        display: grid;
+    }
+}
+
+.logo {
+    position: relative;
+    width: 124px;
+    height: 35px;
+}
+
+.button {
+    display: flex;
+    background-color: $blue;
+    border-radius: 3px;
+    border: none;
+    padding: 18px 42px;
+    gap: 10px;
+    margin-top: 10px;
+    
+    &Icon {
+        position: relative;
+        width: 19px;
+        height: 19px;
+    }
+    &Text {
+        color: $white;
+        font-size: 16px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    &:active {
+        transform:scale(0.9, 0.9);
+    }
+}
+
+.cards {
+    display: flex;
+    gap:10px;
+    &Image{
+        position: relative;
+        width: 59px;
+        height: 37px;
+    }
+}
+
+.info {
+    display: grid;
+    gap: 10px;
+    &Title {
+        color: $white;
+        font-size: 18px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+    }
+    &Text {
+        color: $gray-strong;
+        font-size: 16px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+    }
+    &Empty {
+        padding: 8px;
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    &Pair{
+        display: flex;
+        gap: 10px;
+
+        &Image{
+            position: relative;
+            height: 25px;
+            width: 25px;
+        }
+    }
+    &Text {
+        color: $gray-strong;
+        font-size: 16px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+
+.left {
+    display: grid;
+    gap:25px;
+    margin-bottom: auto;
+}
+
+.first {
+    display: grid;
+    gap: 20px;
+    max-width: 244px;
+
+    &White {
+        color: $white;
+        font-size: 16px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+    }
+    &Gray {
+        color: $gray-strong;
+        font-size: 16px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+
+.forth {
+    display: grid;
+    gap: 30px;
+    margin-bottom: auto;
+
+    &Text {
+        color: $white;
+        font-size: 18px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+
+// .phone {
+//     display: flex;
+//     flex-direction: column;
+//     margin-left: 100px;
+
+//     &>a {
+//         margin-bottom: 6px;
+//         @include h4-title;
+//         color: $white-color;
+//         transition: $transition;
+
+//         &:hover {
+//             color: $hover-color;
+//         }
+//     }
+
+//     &>span {
+//         @include desc-text;
+//         color: $white-color;
+//     }
+// }
+
+// .confidencial {
+//     margin-left: auto;
+//     color: $white-color;
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 18px;
+//     transition: $transition;
+
+//     &:hover {
+//         color: $hover-color;
+//     }
+// }

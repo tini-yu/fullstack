@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'mixins';
+
+
+.card {
+    margin: auto;
+    margin-top: 100px;
+    background-image: url('/assets/images/promos/mini-promo.png');
+    background-position: center;
+    height: 300px;
+    width: 1140px;
+    background-repeat: no-repeat;
+
+    @media (max-width: $desktop) {
+        max-width: 912px;
+    }
+    @media (max-width: $tablet) {
+        margin: auto;
+        margin-top: 100px;
+        background-image: url('/assets/images/promos/cut-mini-promo.png');
+        background-position: center;
+        height: 543px;
+        width: 654px;
+        background-repeat: no-repeat;
+    }
+
+        &Info {
+            position: relative;
+            top: 50px;
+            display: grid;
+            gap: 23px;
+            padding: 0 400px;
+            margin: auto;
+
+            @media (max-width: $desktop) {
+                position: relative;
+                top: 50px;
+                display: grid;
+                gap: 23px;
+                padding: 0 260px;
+                margin: auto;
+            }
+            @media (max-width: $tablet) {
+                position: relative;
+                top: 230px;
+                display: grid;
+                gap: 23px;
+                padding: 0 80px;
+                margin: auto;
+            }
+            
+
+            &Text {
+                font-size: 24px;
+                font-family: $font-lato;
+                font-style: normal;
+                font-weight: 200;
+                color: $white;
+                text-align: left;
+                width: 340px;
+                @media (max-width: $tablet) {
+                    font-size: 20px;
+                }
+            }
+
+            &Image {
+                width: 100px;
+                height: 1px;
+                margin-bottom: 11px;
+                position: relative;
+            }
+
+            &Button {
+                color: $blue;
+                font-size: 16px;
+                font-family: $font-lato;
+                font-style: normal;
+                font-weight: 400;
+                padding: 18px 62px;
+                background-color: $white;
+                border-radius: 3px;
+                border: none;
+                max-width: 262px;
+                &:active {
+                    transform:scale(0.9, 0.9);
+                }
+                @media (max-width: $tablet) {
+                    padding: 16px 56px;
+                }
+            }
+        }
+}

@@ -1,0 +1,207 @@
+@import 'variables';
+@import 'mixins';
+
+.wrap {
+    margin: auto;
+    margin-top: 25px;
+    z-index: 1;
+    height: 500px;
+    width: 1140px;
+    @media (max-width: $desktop) {
+        width: 912px;
+        height: 400px;
+    }
+    @media (max-width: $tablet) {
+        width: 798px;
+        height: 350px;
+    }
+    
+    @media (max-width: 820px) {
+        width: 684px;
+        height: 300px;
+    }
+    
+}
+
+.img {
+    display: grid;
+    height: 500px;
+    width: 1140px;
+    margin: auto;
+    object-fit: cover;
+
+    @media (max-width: $desktop) {
+        width: 912px;
+        height: 400px;
+    }
+    @media (max-width: $tablet) {
+        width: 798px;
+        height: 350px;
+    }
+    @media (max-width: 820px) {
+        width: 684px;
+        height: 300px;
+    }
+    
+}
+
+.Buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 77px;
+    left: 98px;
+    z-index: 2;
+
+    @media (max-width: $desktop) {
+        bottom: 30px;
+        left: 70px;
+    }
+    @media (max-width: $tablet) {
+        bottom: 30px;
+        left: 60px;
+    }
+    @media (max-width: 820px) {
+        scale: 0.8;
+        left: 30px;
+    }
+
+    &Arrows {
+        display: flex;
+        gap: 10px;
+        border:none;
+        &Button {
+            background-color: $blue;
+            border-radius: 3px;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            &:active {
+                background-color: $white;
+                outline: solid $blue 2px;
+                transition-duration: 0.2s;
+                transform:scale(0.9, 0.9);
+            }
+            @media (max-width: $desktop) {
+                padding: 12px;
+            }
+        }
+    }
+    &Info {
+        color: $white;
+        background-color: $blue;
+        padding: 18px 50px 18px 50px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        font-family: $font-lato;
+        &:active {
+            background-color: $white;
+            outline: solid $blue 2px;
+            color: $blue;
+            transition-duration: 0.2s;
+            transform:scale(0.9, 0.9);
+        }
+        @media (max-width: $desktop) {
+            padding: 12px 36px;
+        }
+    }
+}
+
+
+
+.Text {
+    display: block;
+    padding: 77px 717px 77px 98px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    &Title {
+        @include h1-title;
+        @media (max-width: $desktop) {
+            font-size: 55px;
+            line-height: 60px;
+        }
+        @media (max-width: $tablet) {
+            font-size: 45px;
+            line-height: 50px;
+        }
+        @media (max-width: 820px) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        
+    }
+    &Description {
+        margin: 20px 0 0 0;
+        @include h4-title;
+        width: 90%;
+        @media (max-width: 820px) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: $desktop) {
+        padding: 40px 717px 77px 70px;
+    }
+    @media (max-width: $tablet) {
+        font-size: 16px;
+        padding: 30px 450px 77px 60px;
+    }
+}
+
+.a{
+    display: block;
+    padding: 77px 586px 77px 98px;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    &b {
+        @include h1-title;
+        color: $white;
+        @media (max-width: $desktop) {
+            font-size: 50px;
+            line-height: 60px;
+            width: 140%;
+        }
+        @media (max-width: $tablet) {
+            font-size: 45px;
+            line-height: 55px;
+        }
+        @media (max-width: 820px) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    &c {
+        margin: 20px 0 0 0;
+        width: 90%;
+        color: $gray-strong;
+        font-size: 36px;
+        font-family: $font-lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        @media (max-width: $desktop) {
+            font-size: 32px;
+            width: 100%;
+            margin: none;
+        }
+        @media (max-width: $tablet) {
+            font-size: 26px;
+        }
+        @media (max-width: 820px) {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    }
+    @media (max-width: $desktop) {
+        padding: 40px 586px 77px 60px;
+    }
+}

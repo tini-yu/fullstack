@@ -1,0 +1,189 @@
+@import 'variables';
+@import 'mixins';
+
+.card {
+    position: relative;
+    display: grid;
+    gap: 20px;
+    width: 262px;
+    
+    &Background {
+        padding: 30px;
+        display: grid;
+        border-radius: 3px;
+        border: none;
+        background-color: $light-gray;
+        &Image {
+            position: relative;
+            height: 203px;
+            width: 203px;
+        }
+        &Like {
+            position: absolute;
+            background: none;
+            border: none;
+            height: 25px;
+            width: 25px;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    &Middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 132px;
+
+        &Text {
+            display: grid;
+            gap: 7px;
+            overflow: hidden;
+            line-break: normal;
+            max-width: 262px;
+    
+            &Title {
+                @include h4-title;
+                text-transform: uppercase;
+            }
+            &Desc {
+                @include card-description;
+            }
+        }
+        &Price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 45px;
+    
+            &Number {
+                display: flex;
+                gap: 20px;
+    
+                &Current {
+                    color: $black;
+                    font-size: 24px;
+                    font-family: $font-lato;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+                &Crossed {
+                    @include crossed-price;
+                }
+            }
+            &Compare {
+                position: relative;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    &Button {
+        display: flex;
+        background-color: $blue;
+        border-radius: 3px;
+        border: none;
+        padding: 18px 80px;
+        gap: 10px;
+        margin-top: 10px;
+        
+        &Icon {
+            position: relative;
+            width: 19px;
+            height: 19px;
+        }
+        &Text {
+            color: $white;
+            font-size: 16px;
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: 400;
+        }
+        &:active {
+            transform:scale(0.9, 0.9);
+        }
+
+    }
+}
+
+//Backgr (->Image +like) -> Title -> Desc -> (price+price+compare) -> Button
+
+// .card {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 30px 20px 40px;
+//     border-radius: 5px;
+//     box-shadow: $box-shadow;
+
+//     &:hover {
+//         box-shadow: $box-shadow-hover;
+
+//         .cardDescName {
+//             color: $hover-color;
+//         }
+//     }
+
+//     &Image {
+//         position: relative;
+//         margin-bottom: 15px;
+//         aspect-ratio: 1 / 1;
+//     }
+
+//     &Desc {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+        
+//         &Name {
+//             @include h4-title;
+//             margin-bottom: 6px;
+//             text-align: center;
+//             transition: $transition;
+//         }
+
+//         &Text {
+//             @include desc-text;
+//             margin-bottom: 8px;
+//             text-align: center;
+//         }
+
+//         &Price {
+//             margin-bottom: 12px;
+//             color: $black-color;
+//             font-family: $font-roboto;
+//             font-size: 24px;
+//             font-style: normal;
+//             font-weight: 700;
+//             line-height: 30px;
+//             text-align: center;
+//         }
+
+//         &BuyBtn {
+//             position: relative;
+//             z-index: 1;
+//             width: 100%;
+//             padding: 14px 0;
+//             border: none;
+//             border-radius: 5px;
+//             background: $hover-color;
+//             color: $white-color;
+//             cursor: pointer;
+//             font-family: $font-alegreya;
+//             font-size: 18px;
+//             font-style: normal;
+//             font-weight: 900;
+//             letter-spacing: 1px;
+//             line-height: normal;
+//             outline: none;
+//             text-transform: uppercase;
+//             transition: $transition;
+            
+//             &:hover {
+//                 background: $active-color;
+//             }
+//         }
+
+//     }
+// }

@@ -1,0 +1,31 @@
+// Fonts
+$font-alegreya: var(--font-alegreya);
+$font-roboto: var(--font-roboto);
+$font-lato: var(--font-lato);
+
+
+//my colors
+$blue: #1074EB;
+$orange: #FF9900;
+$red: #E92626;
+$black: #383838;
+$gray-strong: #9C9C9C;
+$gray: #C9C9C9;
+$light-gray: #F7F7F7;
+$white: #FFFFFF;
+
+//Breakpoints
+$hd: 1920px;
+$desktop: 1150px;
+$orig: 1140px;
+$tablet: 930px;
+$mobile: 768px;
+$mobile-small: 576px;
+
+
+$box-shadow: 0 0px 10px 0 rgb(165 169 176 / 30%);
+$box-shadow-hover: 0 2px 20px 0 rgb(165 169 176 / 100%);
+$delivery-shadow: 0 2px 5px 0 rgb(199 193 168 / 30%);
+
+
+$transition: 0.2s ease-in-out;

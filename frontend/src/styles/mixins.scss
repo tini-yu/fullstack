@@ -1,0 +1,117 @@
+@import 'variables';
+
+@mixin h1-title {
+  color: $black;
+  font-size: 64px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: 0px;
+}
+
+
+@mixin h2-title {
+  color: $black;
+  font-size: 36px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin h3-title {
+  color: $black;
+  font-size: 24px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin crossed-price {
+  color: $gray;
+  font-size: 24px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+@mixin h4-title {
+  color: $gray-strong;
+  font-size: 18px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+@mixin card-description {
+  color: $black;
+  font-size: 18px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin base-text {
+  color: $black;
+  font-size: 16px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+@mixin p-text {
+  color: $black;
+  font-size: 14px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@mixin small-text {
+  color: $gray-strong;
+  font-size: 12px;
+  font-family: $font-lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin no-scroll-bar() {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}
+
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 5px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+}

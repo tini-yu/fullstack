@@ -1,0 +1,323 @@
+@import 'variables';
+@import 'mixins';
+
+.drop {
+    z-index: 60;
+}
+
+.nav {
+    overflow: auto;
+
+    &List {
+        display: flex;
+        gap: 30px;
+
+        &Info {
+            margin: 15px 0 16px 0;
+            text-decoration: none;
+            color: $black;
+            font-size: 16px;
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: 400;
+            &:hover {
+                color: $blue;
+            }
+
+        }
+
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: auto;
+    @media (max-width: $desktop) {
+        padding: 0 20px;
+
+    }
+}
+
+.back {
+    background-color: $light-gray;
+    width: 100%;
+}
+
+.middle {
+    display: flex;
+    
+    &place{
+        margin: 0;
+
+        &gray {
+            color: $gray-strong;
+            font-size: 16px;
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+        }
+        
+        &black {
+            color: $black;
+            font-size: 16px;
+            font-family: $font-lato;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+        }
+    }
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.logo{
+    margin: 15px 10px 16px 10px;
+    position: relative;
+    width: 20px;
+    height: 4px;
+}
+
+.icon{
+    display: flex;
+    gap: 25px;
+    &pic {
+        position: relative;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.midwrap {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 20px ;
+    max-width: 1140px;
+    margin: auto;
+    @media (max-width: $desktop) {
+        padding: 20px;
+
+    }
+}
+
+.mainlogo{
+    position: relative;
+    width: 144px;
+    height: 38px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+
+    // &WrapImage {
+    //     position: relative;
+    //     width: 40px;
+    //     height: 40px;
+    //     margin-right: 12px;
+    //     transition: $transition;
+    // }
+
+    &Wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Text {
+        color: $black;
+        font-family: $font-lato;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 1.333px;
+        line-height: normal;
+        text-transform: uppercase;
+        transition: $transition;
+
+        &:hover {
+            color: $blue;
+        }
+
+        @media (max-width: $desktop) {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.searchContainer {
+    display: flex;
+    padding: 0px;
+    border-radius: 3px;
+    outline: solid $gray 1px;
+
+  }
+
+.searchContainerButton {
+    float: right;
+    padding: 3px 10px 5px 10px;
+    margin: 5px 5px 5px 5px;
+    background: $blue;
+    color: $white;
+    font-family: $font-lato;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+    &:active {
+        background-color: $white;
+        color: $blue;
+        outline: solid $blue 2px;
+        transition-duration: 0.2s;
+        transform:scale(0.9, 0.9);
+    }
+  }
+
+.input[type=text] {
+    padding: 8px 10px 10px 10px;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+  }
+
+.socialwrap {
+    display: flex;
+    &icon {
+        position: relative;
+        margin: 7.5px;
+        width: 22px;
+        height: 22px;
+    }
+    @media (max-width: $desktop) {
+        display: none;
+
+    }
+}
+
+.orangeButton {
+    padding: 8px 14px 10px 15px;
+
+    background: $orange;
+    color: $white;
+    font-family: $font-lato;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &:active {
+        background-color: $white;
+        color: $orange;
+        outline: solid $orange 2px;
+        transition-duration: 0.2s;
+        transform:scale(0.9, 0.9);
+    }
+    @media (max-width: $tablet) {
+        display: none;
+    }
+}
+
+.cabinet {
+    position: relative;
+    width: 37px;
+    height: 37px;
+}
+
+.category {
+    display: flex;
+    background: $light-gray;
+    max-width: 1140px;
+    margin: auto;
+    z-index: 1;
+
+    @media (max-width: $desktop) {
+        margin: 0 20px 0 20px;
+
+    }
+    
+    &Scroll {
+        white-space: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding: 18px 0 18px 23px;
+        &Box {
+            color: $black;
+            font-family: $font-lato;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 0 23px 0 0;
+            &:hover {
+                color: $blue;
+            }
+        }
+        @include no-scroll-bar;
+
+        @media (max-width: $desktop) {
+            @include custom-scroll-bar;
+        }
+    }
+
+    &Button {
+        display: flex;
+        background: $blue;
+        border-radius: 3px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        &Menu {
+            margin: 15px 15px 15px 15px;
+            position: relative;
+            width: 25px;
+            height: 25px;
+        }
+        &Text {
+            margin: 18px 20px 18px 0px;
+            color: $white;
+            font-family: $font-lato;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+// @import 'variables';
+
+// .nav {
+//     overflow: auto;
+
+//     &List {
+//         display: flex;
+
+//         &Item {
+//             margin: 0 30px;
+
+//             &>a {
+//                 color: $black-color;
+//                 font-family: $font-alegreya;
+//                 font-size: 18px;
+//                 font-style: normal;
+//                 font-weight: 900;
+//                 letter-spacing: 1px;
+//                 line-height: normal;
+//                 text-transform: uppercase;
+//                 transition: $transition;
+
+//                 &:hover {
+//                     color: $hover-color;
+//                 }
+//             }
+//         }
+//     }
+    
+// }
